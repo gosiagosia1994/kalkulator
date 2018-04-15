@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<html>
+<head>
+	<meta charset ="utf-8"/>
+	<title>Kalkulator</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+	
+</head>
+<script>
+
+ function show(i){
+	f.field1.value+=i;
+	if( i=="C"){
+	f.field1.value="";}
+	else if(i=="delete")
+	{
+	var len=f.field1.value.length-7;
+	f.field1.value=f.field1.value.substring(0,len)
+	}
+	
+ }
+
+ function calculate(){
+	result=f.field1.value;
+	result=eval(result);
+	f.field1.value=result;
+}
+
+</script>
+<body>
+<div id="container">
+	<div id="logo">	<h1>Kalkulator</h1></div>
+	<div id="navigation"></div>
+	  <div id="cal">
+		<form name="f">	  
+		<input type="text" id="field1" readonly/>
+		<p>
+		<input class="bt" type="button" id="b1" value="1" onclick="show(b1.value)"/>
+		<input class="bt"type="button" id="b2" value="2" onclick="show(b2.value)"/>
+		<input class="bt" type="button" id="b3" value="3" onclick="show(b3.value)"/>
+		<input class="bt" type="button" id="res" value="=" onclick="calculate()" style="background-color:#D1D1D4"/>
+		<input class="bt" type="button" id="clear" value="C" onclick="show(clear.value)" />
+		
+		</p>
+		<p>
+		<input class="bt" type="button" id="b4" value="4" onclick="show(b4.value)"/>
+		<input class="bt" type="button" id="b5" value="5" onclick="show(b5.value)"/>
+		<input class="bt" type="button" id="b6" value="6" onclick="show(b6.value)"/>
+		<input class="bt" type="button" id="add" value="+" onclick="show(add.value)" style="background-color:#D1D1D4"/>
+		<input class="bt" type="button" id="clearall" value="delete" onclick="show(clearall.value)" />
+		</p>
+		<p>
+		<input class="bt" type="button" id="b7" value="7" onclick="show(b7.value)"/>
+		<input class="bt" type="button" id="b8" value="8" onclick="show(b8.value)"/>
+		<input class="bt" type="button" id="b9" value="9" onclick="show(b9.value)"/>
+		<input class="bt" type="button" id="subtraction" value="-" onclick="show(subtraction.value)" style="background-color:#D1D1D4"/>
+		<input class="bt" type="button" id="percent" value="%" onclick="show(percent.value)" style="background-color:#D1D1D4"/>
+		</p>
+		<p>
+		<input class="bt" type="button" id="b0" value="0" onclick="show(b0.value)"/>
+		<input class="bt" type="button" id="dot" value="." onclick="show(dot.value)"/>
+		<input class="bt" type="button" id="division" value="/" onclick="show(division.value)" style="background-color:#D1D1D4"/>
+		<input class="bt" type="button" id="multiplication" value="*" onclick="show(multiplication.value)" style="background-color:#D1D1D4"/>
+		<input class="bt" type="button" id="memo" value="memo" onclick="memorize()" style="background-color:#D1D1D4"/>
+		</p>
+	  </form>
+	  <i class="icon-left-outline"></i>
+	  </div>
+	<div id="footer"> svdvsvsd</div>
+</div>
+</body>
+</html>
